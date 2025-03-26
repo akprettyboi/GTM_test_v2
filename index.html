@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KZ7CX2LG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffdd57;
+        }
+
+        /* Main content container */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #search-bar input {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Login Section */
+        #login {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            margin: 20px auto;
+            width: 350px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #auth-form input {
+            display: block;
+            width: 85%;
+            margin: 10px auto;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        #auth-form button {
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 90%;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        #auth-form button:hover {
+            background: #0056b3;
+        }
+
+        /* Product Section */
+        #products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 220px;
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product button {
+            background: #28a745;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .product button:hover {
+            background: #218838;
+        }
+
+        /* Cart Section */
+        #cart {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 450px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #checkout {
+            background: #dc3545;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        #checkout:hover {
+            background: #c82333;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            width: 100%;
+            margin-top: auto;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZ7CX2LG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <h1>Online Shopping</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Search products...">
+        </div>
+        
+        <section id="login">
+            <h2>Login / Signup</h2>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Enter Username" required>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        
+        <section id="products">
+            <h2>Products</h2>
+            <div class="product" data-id="1" data-price="500">
+                <h3>Product 1</h3>
+                <p>Price: ₹500</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product" data-id="2" data-price="700">
+                <h3>Product 2</h3>
+                <p>Price: ₹700</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+    
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: ₹<span id="total-price">0</span></p>
+        <button id="checkout">Checkout</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Online Shopping</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
